@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/af76455451.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+        <title>TO-DO</title>
+        <script src = "toDo.js"></script>
+    </head>
+    <body onload="initList()">
+        <h1>To Do List</h1>
+        
+        <div id = "grid-container">
+            <div class="tasksGrid" id = "taskColumn">
+                <span class = "filterSpan">
+                    <label for = "filter" class="fLabelStyle">Filter By Group:</label>
+                    <select id="filter" class="filterStyle">
+                        <option value="View All">View All</option>
+                    </select>
+                    <button onclick="filterTasks()" class="goButton">Go</button>
+                </span>
+                
+            </div>
+            <div class = "rightCol">
+                <div class = "theme">
+                    <i class="fas fa-palette" onclick="showThemes(this)"></i>
+                    <span id = "colors">
+                        <span id = redTheme onclick="changeTheme(this)"></span>
+                        <span id = blueTheme onclick="changeTheme(this)"></span>
+                        <span id = greenTheme onclick="changeTheme(this)"></span>
+                    </span>
+                </div>
+                <div class = "addDiv">  
+                    <i class="far fa-plus-square"></i>
+                    <label for = "task" class="labelStyle">Task:</label>
+                    <input type="text" id="task"  class="inputStyle">
+
+                    <label for = "details" class="labelStyle">Details:</label>
+                    <input type="text" id="details" class="inputStyle">
+
+                    <label for = "group" class="labelStyle">Group:</label>
+                    <input type=text id="group" list = "groups" class = "inputStyle">
+                    <datalist id ="groups">
+                        
+                    </datalist>
+                    <br>
+            
+                    <label for = "group" class="labelStyle">Due Date:</label>
+                    <br>
+                    <input type="date" id="doBy" class="dateStyle">
+                    <br>
+                    
+                    
+                    <button onclick="addTask()" class="addButton">add task</button>
+                </div>
+            </div>
+        </div>
+            
+        
+        <!-- <div class="far fa-circle" onclick="checked(this)">
+        </div> -->
+       
+
+
+    </body>
+
+    
+</html>
+
